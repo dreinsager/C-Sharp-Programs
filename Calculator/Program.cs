@@ -6,20 +6,22 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            string title = "---My Calculator Application--- \n \n";
-            string operation;
-            while (true){
-            //Centering the title
-            Console.SetCursorPosition((Console.WindowWidth - title.Length) / 2, Console.CursorTop);
-            //Change the title color
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(title);
-            Console.ResetColor();
+                string title = "---My Calculator Application--- \n \n";
+                
 
-            Console.WriteLine("Choose which operation you like to use. ( +, -, *, /)");
+            while (true)
+            {
+                //Centering the title
+                Console.SetCursorPosition((Console.WindowWidth - title.Length) / 2, Console.CursorTop);
+                //Change the title color
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(title);
+                Console.ResetColor();
+                            Console.WriteLine("Choose which operation you like to use. ( +, -, *, /)");
+            string operation;
             operation = Console.ReadLine();
 
-            //If statement for performing the operations
+                    //If statement for performing the operations
             if (operation == "+")
             {
                 Console.WriteLine("Please enter your first number:");
@@ -66,22 +68,23 @@ namespace Calculator
                 continue;
             }
 
-            // Prompt user to do another calculation to continue or end program
-            Console.WriteLine("Would you like to do another calculation? [Y or N]");
-            string prompt = Console.ReadLine().ToUpper();
-            
-            if (prompt == "Y") 
-            {
-                continue;
-            }
-            else if (prompt == "N") 
-            {
-                return;
-            }
-            else 
-            {
-                return;
-            }
+
+                // Prompt user to do another calculation to continue or end program
+                Console.WriteLine("Would you like to do another calculation? [Y or N]");
+                string prompt = Console.ReadLine().ToUpper();
+                
+                if (prompt == "Y") 
+                {
+                    continue;
+                }
+                else if (prompt == "N") 
+                {
+                    return;
+                }
+                else 
+                {
+                    return;
+                }
             
             }
 
