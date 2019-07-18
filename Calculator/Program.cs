@@ -8,7 +8,7 @@ namespace Calculator
         {
             string title = "---My Calculator Application--- \n \n";
             string operation;
-
+            while (true){
             //Centering the title
             Console.SetCursorPosition((Console.WindowWidth - title.Length) / 2, Console.CursorTop);
             //Change the title color
@@ -63,8 +63,27 @@ namespace Calculator
 
             {
                 Console.WriteLine("Please enter a valid operator");
+                continue;
             }
 
+            // Prompt user to do another calculation to continue or end program
+            Console.WriteLine("Would you like to do another calculation? [Y or N]");
+            string prompt = Console.ReadLine().ToUpper();
+            
+            if (prompt == "Y") 
+            {
+                continue;
+            }
+            else if (prompt == "N") 
+            {
+                return;
+            }
+            else 
+            {
+                return;
+            }
+            
+            }
 
         }
     }
