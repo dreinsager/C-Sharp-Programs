@@ -17,16 +17,17 @@ namespace Calculator
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(title);
                 Console.ResetColor();
-                            Console.WriteLine("Choose which operation you like to use. ( +, -, *, /)");
-            string operation;
-            operation = Console.ReadLine();
+                Console.WriteLine("Choose which operation you like to use. ( +, -, *, /)");
+
+                string operation;
+                operation = Console.ReadLine();
 
                     //If statement for performing the operations
             if (operation == "+")
             {
-                Console.WriteLine("Please enter your first number:");
+                Console.WriteLine("Please enter your first number:\n");
                 int num1 = int.Parse(Console.ReadLine());
-                Console.WriteLine("Please enter your second number:");
+                Console.WriteLine("Please enter your second number:\n");
                 int num2 = int.Parse(Console.ReadLine());
                 int result = num1 + num2;
                 Console.WriteLine("The answer is " + result);
